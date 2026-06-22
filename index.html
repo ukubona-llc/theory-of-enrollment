@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Synergies Unseen · Ukubona LLC · 22 Jun 2026</title>
+<meta property="og:title" content="Synergies Unseen · Ukubona LLC Roundtable · 22 Jun 2026" />
+<meta property="og:description" content="Three Budonians. One enrollment primitive. Five voices. What the school already was, and what the ledger still lacks. Kampala · 22 June 2026. Verbatim. Non-lossy." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://abikesa.github.io/logos/assets/ukubona-light.png" />
+<link rel="icon" href="https://abikesa.github.io/favicon/assets/favicon-dark.ico" />
+<link rel="icon" href="https://abikesa.github.io/favicon/assets/favicon-light.ico" media="(prefers-color-scheme:light)" />
+<link rel="preload" href="https://abikesa.github.io/logos/assets/ukubona-dark.png" as="image" />
+<link rel="preload" href="https://abikesa.github.io/logos/assets/ukubona-light.png" as="image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+<style>
+/* ── TOKENS ─────────────────────────────────────────────────────────────── */
+:root {
+  --bg0:#0d0d0d; --bg1:#161616; --bg2:#1e1e1e; --bg3:#282828;
+  --border:rgba(255,255,255,0.07); --border-md:rgba(255,255,255,0.13);
+  --text0:#f2f0eb; --text1:#b8b4aa; --text2:#6e6a62;
+  --accent:#7f77dd; --accent-d:rgba(127,119,221,0.15); --accent-b:rgba(127,119,221,0.35);
+  --gold:#c8921a;  --gold-d:rgba(200,146,26,0.13);    --gold-b:rgba(200,146,26,0.32);
+  --coral:#d85a30; --coral-d:rgba(216,90,48,0.13);    --coral-b:rgba(216,90,48,0.32);
+  --teal:#1d9e75;  --teal-d:rgba(29,158,117,0.13);    --teal-b:rgba(29,158,117,0.30);
+  --rose:#c0516a;  --rose-d:rgba(192,81,106,0.13);    --rose-b:rgba(192,81,106,0.30);
+  --sage:#5a8a6a;  --sage-d:rgba(90,138,106,0.13);    --sage-b:rgba(90,138,106,0.30);
+  --serif:'DM Serif Display',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --mono:'DM Mono','Fira Mono',monospace;
+  --max:920px; --r:8px; --rl:14px;
+}
+[data-theme="light"] {
+  --bg0:#f5f3ee; --bg1:#ffffff; --bg2:#f0ede6; --bg3:#e8e4db;
+  --border:rgba(0,0,0,0.07); --border-md:rgba(0,0,0,0.13);
+  --text0:#1a1916; --text1:#4a4740; --text2:#8a8680;
+  --accent:#534ab7; --accent-d:rgba(83,74,183,0.09); --accent-b:rgba(83,74,183,0.28);
+  --gold:#7a520a;  --gold-d:rgba(122,82,10,0.09);    --gold-b:rgba(122,82,10,0.26);
+  --coral:#993c1d; --coral-d:rgba(153,60,29,0.09);   --coral-b:rgba(153,60,29,0.26);
+  --teal:#127a58;  --teal-d:rgba(18,122,88,0.09);    --teal-b:rgba(18,122,88,0.24);
+  --rose:#923148;  --rose-d:rgba(146,49,72,0.09);    --rose-b:rgba(146,49,72,0.24);
+  --sage:#3a6a4a;  --sage-d:rgba(58,106,74,0.09);    --sage-b:rgba(58,106,74,0.24);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:var(--sans);background:var(--bg0);color:var(--text0);line-height:1.75;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* ── NAV ─────────────────────────────────────────────────────────────────── */
+.site-nav{position:sticky;top:0;z-index:200;background:var(--bg0);border-bottom:1px solid var(--border);transition:background .3s;}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 1.5rem;height:52px;display:flex;align-items:center;gap:.85rem;}
+.logo-wrap{width:30px;height:30px;flex-shrink:0;position:relative;}
+.logo-wrap img{width:100%;height:100%;object-fit:contain;position:absolute;top:0;left:0;transition:opacity .35s;animation:spin 120s linear infinite;}
+.logo-dark{opacity:1;} .logo-light{opacity:0;}
+[data-theme="light"] .logo-dark{opacity:0;} [data-theme="light"] .logo-light{opacity:1;}
+@keyframes spin{to{transform:rotate(360deg);}}
+@media(prefers-reduced-motion:reduce){.logo-wrap img{animation:none;}}
+.nav-brand{font-family:var(--serif);font-size:.95rem;color:var(--text0);flex:1;}
+.nav-sub{font-family:var(--mono);font-size:.58rem;color:var(--text2);letter-spacing:.08em;margin-left:.4rem;}
+.theme-btn{background:var(--bg2);border:1px solid var(--border-md);border-radius:20px;padding:.25rem .75rem;font-family:var(--mono);font-size:.62rem;color:var(--text1);cursor:pointer;letter-spacing:.05em;transition:background .2s,color .2s;flex-shrink:0;}
+.theme-btn:hover{background:var(--bg3);color:var(--text0);}
+
+.outer{max-width:var(--max);margin:0 auto;padding:0 1.5rem;}
+
+/* ── HERO ────────────────────────────────────────────────────────────────── */
+.hero{padding:3.5rem 0 2rem;border-bottom:1px solid var(--border);}
+.eyebrow{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text2);margin-bottom:.85rem;}
+.hero-title{font-family:var(--serif);font-size:clamp(2.2rem,6.5vw,4rem);line-height:1.04;letter-spacing:-.025em;color:var(--text0);margin-bottom:.9rem;}
+.hero-title em{font-style:italic;color:var(--accent);}
+.hero-lede{font-size:1rem;color:var(--text1);max-width:68ch;line-height:1.72;margin-bottom:1.6rem;}
+.hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem;font-family:var(--mono);font-size:.62rem;color:var(--text2);letter-spacing:.06em;}
+.meta-chip{display:inline-flex;align-items:center;gap:.4rem;background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:.2rem .65rem;}
+.dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.dot-ukb{background:var(--rose);}
+.dot-xai{background:var(--gold);}
+.dot-google{background:var(--teal);}
+.dot-openai{background:var(--coral);}
+.dot-claude{background:var(--accent);}
+.dot-school{background:var(--sage);}
+
+/* ── THREAD ──────────────────────────────────────────────────────────────── */
+.thread{padding:2.5rem 0;display:flex;flex-direction:column;gap:1.75rem;}
+.thread-item{display:flex;gap:.9rem;align-items:flex-start;}
+.thread-rail{flex-shrink:0;display:flex;flex-direction:column;align-items:center;padding-top:1.15rem;}
+.thread-badge{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;font-family:var(--mono);font-size:.6rem;font-weight:500;border:1px solid var(--border-md);flex-shrink:0;}
+.badge-ukb{color:var(--rose);background:var(--rose-d);border-color:var(--rose-b);}
+.badge-xai{color:var(--gold);background:var(--gold-d);border-color:var(--gold-b);}
+.badge-google{color:var(--teal);background:var(--teal-d);border-color:var(--teal-b);}
+.badge-openai{color:var(--coral);background:var(--coral-d);border-color:var(--coral-b);}
+.badge-claude{color:var(--accent);background:var(--accent-d);border-color:var(--accent-b);}
+.badge-school{color:var(--sage);background:var(--sage-d);border-color:var(--sage-b);}
+.thread-line{width:1px;flex:1;background:var(--border-md);margin-top:.5rem;min-height:24px;}
+
+/* ── CARDS ───────────────────────────────────────────────────────────────── */
+.resp-card{flex:1;min-width:0;background:var(--bg1);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;}
+.resp-card.ukb-card   {border-left:3px solid var(--rose);}
+.resp-card.xai-card   {border-left:3px solid var(--gold);}
+.resp-card.google-card{border-left:3px solid var(--teal);}
+.resp-card.openai-card{border-left:3px solid var(--coral);}
+.resp-card.claude-card{border-left:3px solid var(--accent);}
+.resp-card.school-card{border-left:3px solid var(--sage);}
+
+.resp-header{padding:1rem 1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:1rem;}
+.resp-icon{font-size:1.35rem;line-height:1;flex-shrink:0;margin-top:.1rem;}
+.resp-meta{flex:1;}
+.resp-lab{font-family:var(--mono);font-size:.72rem;font-weight:500;color:var(--text0);letter-spacing:.04em;margin-bottom:.2rem;}
+.resp-sub{font-family:var(--mono);font-size:.58rem;color:var(--text2);letter-spacing:.06em;}
+.resp-chip{font-family:var(--mono);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .55rem;border-radius:20px;flex-shrink:0;white-space:nowrap;}
+.chip-ukb   {background:var(--rose-d);border:1px solid var(--rose-b);color:var(--rose);}
+.chip-xai   {background:var(--gold-d);border:1px solid var(--gold-b);color:var(--gold);}
+.chip-google{background:var(--teal-d);border:1px solid var(--teal-b);color:var(--teal);}
+.chip-openai{background:var(--coral-d);border:1px solid var(--coral-b);color:var(--coral);}
+.chip-claude{background:var(--accent-d);border:1px solid var(--accent-b);color:var(--accent);}
+.chip-school{background:var(--sage-d);border:1px solid var(--sage-b);color:var(--sage);}
+
+/* ── BODY ────────────────────────────────────────────────────────────────── */
+.resp-body{padding:1.5rem;font-size:.875rem;color:var(--text1);line-height:1.82;}
+.resp-body h3{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--text0);margin:1.5rem 0 .55rem;line-height:1.3;}
+.resp-body h3:first-child{margin-top:0;}
+.resp-body h4{font-family:var(--mono);font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);margin:1.1rem 0 .4rem;}
+.resp-body p{margin-bottom:.85rem;}
+.resp-body p:last-child{margin-bottom:0;}
+.resp-body strong{color:var(--text0);font-weight:500;}
+.resp-body em{font-style:italic;}
+.resp-body ul,.resp-body ol{padding-left:1.4rem;margin-bottom:.85rem;}
+.resp-body li{margin-bottom:.35rem;}
+.resp-body ul ul,.resp-body ol ol{margin:.3rem 0 0;}
+.resp-body li > ul,.resp-body li > ol{margin-top:.35rem;}
+.resp-body blockquote{border-left:2px solid var(--border-md);padding-left:1rem;margin:1rem 0;font-style:italic;color:var(--text1);}
+.resp-body hr{border:none;border-top:1px solid var(--border);margin:1.25rem 0;}
+.resp-body code{font-family:var(--mono);font-size:.78rem;background:var(--bg3);padding:.1rem .35rem;border-radius:3px;color:var(--text0);}
+
+/* ── SPECIAL BLOCKS ──────────────────────────────────────────────────────── */
+.math-block{font-family:var(--mono);font-size:.8rem;background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent-b);border-radius:0 var(--r) var(--r) 0;padding:.9rem 1.25rem;color:var(--text0);margin:1rem 0;overflow-x:auto;line-height:2;}
+.url-block{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:.65rem 1rem;margin:.75rem 0;font-family:var(--mono);font-size:.72rem;}
+.url-block a{color:var(--accent);word-break:break-all;}
+
+/* ── PROMPT BRIDGES ──────────────────────────────────────────────────────── */
+.prompt-bridge{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem 1.25rem;margin:.25rem 0 .25rem 3.6rem;background:var(--bg1);border:1px dashed var(--border-md);border-radius:var(--r);}
+.pb-label{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);white-space:nowrap;padding-top:.15rem;}
+.pb-content{font-family:var(--mono);font-size:.72rem;color:var(--text1);line-height:1.6;}
+
+/* ── SCHOOL SCREENSHOTS ──────────────────────────────────────────────────── */
+.screen-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0;}
+.screen-item{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:.75rem;font-family:var(--mono);font-size:.7rem;color:var(--text2);}
+.screen-label{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);margin-bottom:.4rem;}
+.screen-url{color:var(--accent);font-size:.65rem;word-break:break-all;}
+
+/* ── CLOSING ─────────────────────────────────────────────────────────────── */
+.closing-card{background:var(--accent-d);border:1px solid var(--accent-b);border-radius:var(--rl);padding:2rem;margin:2rem 0 3rem;}
+.closing-head{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+.closing-quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,3vw,1.5rem);color:var(--text0);line-height:1.35;margin-bottom:1rem;}
+.closing-body{font-size:.9rem;color:var(--text1);line-height:1.75;}
+.closing-body p{margin-bottom:.65rem;}
+.closing-body p:last-child{margin-bottom:0;}
+
+/* ── FOOTER ──────────────────────────────────────────────────────────────── */
+footer{border-top:1px solid var(--border);padding:2rem 0;margin-top:2rem;}
+.footer-inner{max-width:var(--max);margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap;}
+.footer-mark{font-family:var(--mono);font-size:.6rem;color:var(--text2);line-height:1.9;letter-spacing:.04em;}
+.footer-mark span{color:var(--text1);}
+.footer-refs{font-family:var(--mono);font-size:.58rem;color:var(--text2);line-height:2;}
+.footer-refs a{color:var(--text2);}
+.footer-refs a:hover{color:var(--text1);}
+
+@media(max-width:640px){
+  .outer{padding:0 1rem;}
+  .hero-title{font-size:1.9rem;}
+  .thread-item{gap:.5rem;}
+  .thread-badge{width:26px;height:26px;font-size:.55rem;}
+  .resp-body{padding:1.1rem;}
+  .screen-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────────────────────────────── -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <div class="logo-wrap" aria-hidden="true">
+      <img class="logo-dark" src="https://abikesa.github.io/logos/assets/ukubona-dark.png" alt="" />
+      <img class="logo-light" src="https://abikesa.github.io/logos/assets/ukubona-light.png" alt="" />
+    </div>
+    <div class="nav-brand">Ukubona <span class="nav-sub">· Synergies Unseen · 22 Jun 2026</span></div>
+    <button class="theme-btn" id="theme-btn">light</button>
+  </div>
+</nav>
+
+<div class="outer">
+
+<!-- ── HERO ─────────────────────────────────────────────────────────────── -->
+<header class="hero">
+  <p class="eyebrow">Ukubona LLC · Roundtable Archive · Kampala · Monday 22 June 2026 · Verbatim · Non-lossy</p>
+  <h1 class="hero-title">Synergies<br><em>Unseen.</em></h1>
+  <p class="hero-lede">Three Budonians convened on a Sunday in Kampala. One had trained in Australia. One was Aggrey Ssemerre. One was the builder of the framework being discussed. The encounter exposed a question none of the four LLM voices had asked: what is the social primitive that makes someone trust the ledger enough to contribute to it? The school already had the answer. The question was whether it knew it.</p>
+  <div class="hero-meta">
+    <span class="meta-chip"><span class="dot dot-ukb"></span>Ukubona · source &amp; synthesis</span>
+    <span class="meta-chip"><span class="dot dot-xai"></span>xAI</span>
+    <span class="meta-chip"><span class="dot dot-google"></span>Google</span>
+    <span class="meta-chip"><span class="dot dot-openai"></span>OpenAI</span>
+    <span class="meta-chip"><span class="dot dot-claude"></span>Anthropic · Claude</span>
+    <span class="meta-chip"><span class="dot dot-school"></span>School · j-digital-twin.onrender.com</span>
+    <span class="meta-chip">State<sub>t</sub> = Σ Event<sub>i</sub></span>
+  </div>
+</header>
+
+</div><!-- /outer -->
+
+<div class="outer">
+<div class="thread">
+
+<!-- ═══════════════════════════════════════
+     SOURCE DOCUMENT — Ukubona / the Author
+     ═══════════════════════════════════════ -->
+<div class="thread-item">
+  <div class="thread-rail">
+    <div class="thread-badge badge-ukb">✦</div>
+    <div class="thread-line"></div>
+  </div>
+  <div class="resp-card ukb-card">
+    <div class="resp-header">
+      <div class="resp-icon">✦</div>
+      <div class="resp-meta">
+        <div class="resp-lab">Ukubona / the Author · Source Input</div>
+        <div class="resp-sub">The genesis document · Kampala · Monday 22 June 2026</div>
+      </div>
+      <span class="resp-chip chip-ukb">Source</span>
+    </div>
+    <div class="resp-body">
+
+      <h3>The question</h3>
+      <ul>
+        <li>How does Ukubona LLC lead visionary efforts at all levels of Civilization?</li>
+        <li>Chief issue is synergies across actors who aren't aware of each other</li>
+        <li>Now we have an architectural blueprint that reveals the nature of the potential synergies</li>
+        <li>Ultimately we need access to big grants from NIH, Gates, and other places</li>
+        <li>But we must first showcase what we can achieve without grants</li>
+      </ul>
+
+      <div class="math-block">
+I.   Negentropy / Tensor / Variance / θᵗ / Event-Stream / Journaling, Telemetry, Economics
+II.  Input / Matrix / Coupling / L₀+Σwᵢ·Lᵢ / Jacobian Matrix (ROYGBIV heatmap) / FastAPI, System 1
+III. Throughput / Vector / Shock / f(σ²,λ,ε) / Vectors V→R orientation / Append-Only NDJSON
+IV.  Output / Eigenmodes / Error / γ|ε_FGT|² / Align with values / SlowAPI, System 2 (LLMs)
+     — Language · Science · Art · Life · Meaning
+V.   Entropy / Scalar / Update / L(θᵗ⁺¹) / Regression coefficients, 95% CI, p-values / Vite-React UI
+
+TMVES = f(VCSEU) ~ adversarial training
+      </div>
+
+      <h3>Agitation · Sunday 22 June 2026 encounter</h3>
+      <ul>
+        <li>Australian / Medical School / Muhame's cohort (get his name!)</li>
+        <li>Aggrey Ssemerre</li>
+        <li>Yours truly</li>
+      </ul>
+      <p>Three Budonians who attended medical school. Topics covered:</p>
+      <ul>
+        <li>Demo teaching advanced epidemiology in Ukubona LLC School</li>
+        <li>Demo clinical twin</li>
+        <li>Demo NPA demo</li>
+        <li>Continue discussion of event-streams as data pipeline</li>
+        <li>Introduce the Jacobian matrix as legibility to those who didn't study epidemiology and biostatistics</li>
+        <li>FastAPI as System 1: routing and curating the NDJSON append-only ledger</li>
+        <li>SlowAPI / LLMs as suggesting interaction terms to add to Jacobian (because event-stream has no interaction terms)</li>
+        <li>What to do with those IDI databases?</li>
+        <li>I think we just have to surface those scalars — Uganda, Rakai cartography, etc</li>
+        <li>Also discussed closer and deliberate collaboration: NPA · UCU · IDI · Makerere · Ministry of Health · Private clinics · Ukubona LLC · UCSF · JHU · etc</li>
+      </ul>
+
+      <h3>Iteration — existing artifacts</h3>
+      <div class="url-block">
+        <a href="https://ukubona-llc.github.io/kasamba/" target="_blank">kasamba</a> ·
+        <a href="https://ukubona-llc.github.io/versailles/" target="_blank">versailles</a> ·
+        <a href="https://ukubona-llc.github.io/escape/" target="_blank">escape</a> ·
+        <a href="https://ukubona-llc.github.io/annealing/" target="_blank">annealing</a> ·
+        <a href="https://ukubona-llc.github.io/autobiography/" target="_blank">autobiography</a> ·
+        <a href="https://ukubona-llc.github.io/zarathustra/" target="_blank">zarathustra</a> ·
+        <a href="https://ukubona-llc.github.io/hamlet/" target="_blank">hamlet</a> ·
+        <a href="https://ukubona-llc.github.io/adjectives/" target="_blank">adjectives</a> ·
+        <a href="https://ukubona-llc.github.io/wisdom/" target="_blank">wisdom</a> ·
+        <a href="https://ukubona-llc.github.io/npa/" target="_blank">npa</a> ·
+        <a href="https://ukubona-llc.github.io/renal-map/" target="_blank">renal-map</a> ·
+        <a href="https://ukubona-llc.github.io/loss-function/" target="_blank">loss-function</a> ·
+        <a href="https://ukubona-llc.github.io/who-reviews/" target="_blank">who-reviews</a> ·
+        <a href="https://ukubona-llc.github.io/recognition/" target="_blank">recognition</a>
+      </div>
+      <p style="font-size:.8rem;color:var(--text2);font-family:var(--mono);">renal-map: accessible real-time scalar as UI/UX; serious work via data-pipeline beneath · yet to be articulated: what we need as we iterate towards a federated network of stakeholders</p>
+
+      <h3>The live system · j-digital-twin.onrender.com</h3>
+      <p>Running at this URL. Not accessible via raw link — it's a full React/FastAPI application. What is visible in screenshots (below) reveals what the system already is.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SCHOOL ARTIFACT — What was already built
+     ═══════════════════════════════════════ -->
+<div class="thread-item">
+  <div class="thread-rail">
+    <div class="thread-badge badge-school">⬡</div>
+    <div class="thread-line"></div>
+  </div>
+  <div class="resp-card school-card">
+    <div class="resp-header">
+      <div class="resp-icon">⬡</div>
+      <div class="resp-meta">
+        <div class="resp-lab">Ukubona LLC School · j-digital-twin.onrender.com · What the screenshots reveal</div>
+        <div class="resp-sub">Login · Dashboard · 25 courses · 5 pillars · 5 levels · Admin · Token issuance · Activity log · Twin.jsx</div>
+      </div>
+      <span class="resp-chip chip-school">School</span>
+    </div>
+    <div class="resp-body">
+
+      <p>The screenshots surfaced the live system for the first time in this session. What they show is not a prototype. It is a functioning access-control platform with a curriculum inside it.</p>
+
+      <div class="screen-grid">
+        <div class="screen-item">
+          <div class="screen-label">Login page · 6:15 AM</div>
+          <div>Music. Statistics. Adaptation. Regulation. Technology. "A sovereign learning infrastructure rooted in wellness, built for Uganda." Sign in by invitation only.</div>
+        </div>
+        <div class="screen-item">
+          <div class="screen-label">Dashboard hero · 6:16 AM</div>
+          <div>25 courses · V levels · V pillars. The pentadic equation runs in the header: θᵗ → L₀+Σwᵢ·Lᵢ → f(σ²,λ,ε) → γ|ε_FGT|² → L(θᵗ⁺¹). The loss landscape: each Ugandan district gets a color.</div>
+        </div>
+        <div class="screen-item">
+          <div class="screen-label">Courses grid · secondary + university + research</div>
+          <div>5×5 matrix: Music · Statistics · Adaptation · Regulation · Technology across Kindergarten → Primary → Secondary → University → Research. All 25 courses rendered. Lesson-ready tags visible.</div>
+        </div>
+        <div class="screen-item">
+          <div class="screen-label">Admin panel · Users tab</div>
+          <div>Four users: School Administrator (ADMIN) · Abimereki (RESEARCHER) · Ilya Zosima (STUDENT) · Paul Kasenene (TEACHER / DrK). Roles visible. Status: all Active.</div>
+        </div>
+        <div class="screen-item">
+          <div class="screen-label">Admin · User Token tab</div>
+          <div>Dropdown built from registry.js. Time-limited JWT issued per course or lesson. Selected: M103 · High &amp; Low (Sound &amp; Silence). Duration: 1h. "Generate."</div>
+        </div>
+        <div class="screen-item">
+          <div class="screen-label">Token modal · locked lesson</div>
+          <div>"This lesson requires a token. Contact your administrator for access." Input field: paste token. Unlock button. The enrollment primitive: one click from invitation to content.</div>
+        </div>
+        <div class="screen-item">
+          <div class="screen-label">M103 · High &amp; Low · kindergarten music</div>
+          <div>"Some sounds live high. A bird sings high in the sky. An elephant speaks low on the earth. Both are sounds. But they do not live in the same place." Slide 1/5. Next →</div>
+        </div>
+        <div class="screen-item">
+          <div class="screen-label">Admin dropdown · full course registry</div>
+          <div>T507 · Geodesics, Bayesian Rehearsal &amp; the Waste Twin highlighted. Full registry visible: M-series, S-series, A-series, R-series, T-series. 100+ lessons. Built from registry.js.</div>
+        </div>
+      </div>
+
+      <h3>What the code reveals</h3>
+      <p>The <strong>main.py</strong> (FastAPI, 17.1KB) implements: JWT auth, append-only NDJSON ledger on GitHub (branch: ukhona), three event classes (labor · machine · market), SlowAPI claim/resolution cycle with ε_FGT computation, course token issuance, Resend email delivery, optional Anthropic/OpenAI keys for live inference. The system runs fully without LLM keys — ε_FGT stays null, the rest operates.</p>
+      <p>The <strong>registry.js</strong> (21.7KB) maps 25 courses × 5 levels × 5 pillars to lazy-loaded React components. T517 = Twin.jsx = Enterprise Digital Twin, the full TMVES simulation engine with ROYGBIV Jacobian heatmap, Oracle Inspector, three simulation engines (labor · machine · market), eigenmode decomposition, and multivariable regression panel.</p>
+      <p>The <strong>NDJSON ledger</strong>: DrK.ndjson (485B) · admin.ndjson (45.8KB) · iZosima.ndjson (2.4KB). The event accumulation is already running. θᵗ = Σ Eventᵢ is not a metaphor here — it is the persistence layer.</p>
+      <p>The <strong>users visible</strong> in the admin panel: Abimereki (RESEARCHER) and Paul Kasenene (TEACHER) are real. Their clearance levels differ. What Abimereki can see that iZosima cannot is not yet architecturally specified in the visible code — a live gap in the system.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     xAI
+     ═══════════════════════════════════════ -->
+<div class="thread-item">
+  <div class="thread-rail">
+    <div class="thread-badge badge-xai">xAI</div>
+    <div class="thread-line"></div>
+  </div>
+  <div class="resp-card xai-card">
+    <div class="resp-header">
+      <div class="resp-icon">🟡</div>
+      <div class="resp-meta">
+        <div class="resp-lab">xAI · Response</div>
+        <div class="resp-sub">Neutral broker critique · synergies via legibility · four demos · tech backbone</div>
+      </div>
+      <span class="resp-chip chip-xai">xAI</span>
+    </div>
+    <div class="resp-body">
+
+      <p><strong>Ukubona LLC's role is to serve as a "seeing" broker</strong> — making invisible synergies legible across fragmented actors in health, science, education, and beyond, especially in Uganda and East Africa. The framework (TMVES = f(VCSEU)) provides a powerful architectural blueprint: turning raw event streams into actionable, value-aligned intelligence while surfacing mismatches (ε_FGT) for real accountability.</p>
+
+      <h3>Core Vision: Synergies via Legibility</h3>
+      <p>The chief issue — actors (IDI, Makerere, Ministry of Health, UCU, NPA, private clinics, UCSF, JHU, etc.) operating without awareness of each other — is addressed by the stack:</p>
+      <ul>
+        <li><strong>I. Negentropy/Tensor/Event-Stream:</strong> Ingest labor/patient journals, machine telemetry, news/economics as append-only NDJSON. Federated ground truth ledger — no overwriting, full attribution.</li>
+        <li><strong>II. Input/Matrix/Jacobian (ROYGBIV heatmap):</strong> FastAPI System 1 for routing, curating, and computing sensitivities. Translates high-dimensional event data into interpretable partial derivatives. Ideal for non-epidemiologists.</li>
+        <li><strong>III. Throughput/Vector/Shock:</strong> Select vectors (V→R orientation) for orientation and decision shocks.</li>
+        <li><strong>IV. Output/Eigenmodes:</strong> SlowAPI/LLMs (System 2) suggest interaction terms, align with values (Language, Science, Art, Life, Meaning), enable "rotation" to escape local minima.</li>
+        <li><strong>V. Entropy/Scalar/Update:</strong> Surface regression coefficients, CIs, p-values, multimodal UI/UX. Real-time scalars (renal-map style) for dashboards; serious pipeline underneath.</li>
+      </ul>
+
+      <h3>Immediate Showcase Opportunities (No Grants Needed)</h3>
+      <ol>
+        <li><strong>Demo Teaching Advanced Epidemiology in Ukubona LLC School.</strong> Use event-streams from IDI/Makerere/Rakai. Jacobian as teaching tool with ROYGBIV heatmaps. FastAPI backend for real-time updates; React frontend for interactivity.</li>
+        <li><strong>Demo Clinical Twin.</strong> Event stream → Jacobian sensitivities → LLM-suggested interventions (with ε_FGT feedback). Start small: pilot with private clinics.</li>
+        <li><strong>NPA Demo + Event-Streams Pipeline.</strong> FastAPI ingests NDJSON; computes Jacobian over pentad-like vectors. Surface IDI scalars (Uganda/Rakai) via secure, anonymized views.</li>
+      </ol>
+
+      <h3>Tech Backbone (iterative, bootstrap)</h3>
+      <ul>
+        <li>Append-only NDJSON ledger (GitHub or lightweight Postgres for auditability)</li>
+        <li>FastAPI (System 1) + SlowAPI/LLMs (System 2)</li>
+        <li>Vite-React UI for scalars/Jacobians; export to Word/PDF/PPTX for stakeholders</li>
+        <li>Adversarial elements: LLMs propose interaction terms the event-stream lacks</li>
+      </ul>
+
+      <p>This positions Ukubona LLC as the neutral, visionary broker — <strong>Ukubona ("to see")</strong> — that reveals potential synergies, surfaces values, and builds the data infrastructure for grants. The Sunday 22 June 2026 encounter (Aggrey Ssemerre, Australian med school cohort, etc.) is perfect fodder for the next "kasamba"-style roundtable archive.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     GOOGLE
+     ═══════════════════════════════════════ -->
+<div class="thread-item">
+  <div class="thread-rail">
+    <div class="thread-badge badge-google">G</div>
+    <div class="thread-line"></div>
+  </div>
+  <div class="resp-card google-card">
+    <div class="resp-header">
+      <div class="resp-icon">🟢</div>
+      <div class="resp-meta">
+        <div class="resp-lab">Google · Response</div>
+        <div class="resp-sub">Jacobian as aha moment · feeling the synergies · temporal pedantry · JacobianDashboard.jsx</div>
+      </div>
+      <span class="resp-chip chip-google">Google</span>
+    </div>
+    <div class="resp-body">
+
+      <p>It sounds like a defining, high-voltage weekend, though just a quick temporal grounding: the encounter with Aggrey and the Budo cohort was yesterday, Sunday, June 21 (as today is Monday, June 22, 2026). Regardless, the momentum from that conversation is exactly the kind of "negentropy" Ukubona LLC needs to capture in its ledger.</p>
+
+      <p>When you have a grand, unifying architecture like TMVES = f(VCSEU) operating across IDI, Makerere, UCU, and the MoH, the greatest risk is that the stakeholders see it as abstract theory rather than a pragmatic engine. To unlock grants from NIH or Gates, you cannot just describe the pipeline; you must let them <em>feel</em> the synergies.</p>
+
+      <p>If Ukubona is the "seeing" broker, <strong>you must build the Jacobian Matrix teaching demo first.</strong></p>
+
+      <p>The append-only NDJSON ledger (System 1) is invisible plumbing, and the LLM interaction terms (System 2) can feel like a black box. But the Jacobian matrix — rendered as a ROYGBIV heatmap — is pure legibility. It takes the abstract multivariable equation and visually answers the only question clinical directors and policymakers care about: "If I apply a shock to this specific vector in Rakai, how does it ripple through the rest of the system?"</p>
+
+      <h3>Why the Jacobian heatmap beats other options for MVP</h3>
+      <ol>
+        <li><strong>Low Data Barrier:</strong> You don't need a fully integrated, HIPAA-compliant federated ledger to build this demo. Seed it with anonymized scalar data from existing IDI databases or Rakai cartography.</li>
+        <li><strong>Immediate "Aha" Moment:</strong> When Aggrey moves a slider representing "Supply Chain Routing" and watches the "Patient Adherence" cells change color, they immediately grasp the value of federated ground truth.</li>
+        <li><strong>Bridges System 1 and System 2:</strong> Show how FastAPI handles deterministic routing of inputs, while demonstrating how SlowAPI (LLMs) can be toggled on to suggest new, non-obvious interaction terms to add to the matrix.</li>
+      </ol>
+
+      <p><strong>Key insight:</strong> By presenting the Jacobian not as static math, but as a responsive ecosystem, you allow stakeholders from private clinics to UCSF to physically manipulate the variables. It proves that Ukubona's architecture doesn't just record data — it maps the ε_FGT (mismatches) and computes the exact vectors needed to escape local minima.</p>
+
+      <p>Google also produced a complete <code>JacobianDashboard.jsx</code> React component (dark-mode, sliders for "Intervention Shock" and "Supply Efficiency," live entropy computation, "Overlay Interactions" toggle) — the ROYGBIV gradient widget shown in the screenshot from Gemini at 5:59 AM.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     OPENAI
+     ═══════════════════════════════════════ -->
+<div class="thread-item">
+  <div class="thread-rail">
+    <div class="thread-badge badge-openai">O</div>
+    <div class="thread-line"></div>
+  </div>
+  <div class="resp-card openai-card">
+    <div class="resp-header">
+      <div class="resp-icon">🔴</div>
+      <div class="resp-meta">
+        <div class="resp-lab">OpenAI · Response</div>
+        <div class="resp-sub">Civilizational observability layer · Data → Phenomenology → Policy → Values → Collective memory · Phase VI · Four demos · NIH/Gates critique</div>
+      </div>
+      <span class="resp-chip chip-openai">OpenAI</span>
+    </div>
+    <div class="resp-body">
+
+      <p>The strongest reading of the document is that Ukubona LLC is <strong>not primarily a health company, an AI company, or an educational institution.</strong></p>
+      <p>It is attempting to become a <strong>civilizational observability layer.</strong></p>
+      <p>The challenge is that almost nobody funds observability <em>per se</em>. They fund things that observability improves. So the question is less "How does Ukubona lead visionary efforts at all levels of civilization?" and more "How does Ukubona become indispensable to actors already attempting to lead civilization?"</p>
+
+      <h3>Interpretation of TMVES</h3>
+      <p>The most interesting thing is the implicit separation:</p>
+      <p><strong>Data → Legibility → Decision → Meaning → Adaptation</strong></p>
+      <p>Most institutions stop at Data → Dashboard. Ukubona seems to want: Data → Phenomenology → Policy → Values → Collective memory.</p>
+
+      <h3>The issue with NIH/Gates</h3>
+      <p>I suspect NIH or Gates won't care very much about Zarathustra, Hamlet, Annealing, Wisdom — initially. Not because these are unimportant, but because grants are purchased by showing: (1) measurable output, (2) existing datasets (IDI, Rakai, HMIS, DHIS2), (3) one compelling visualization.</p>
+      <p>The Jacobian heatmap may be your best object. It translates "Ukubona philosophy" into "If vaccine stockouts increase by 10%, here is what changes."</p>
+
+      <h3>Four demos if I were CEO of Ukubona LLC</h3>
+      <ol>
+        <li><strong>Epidemiology School:</strong> NDJSON → FastAPI → Jacobian → Heatmap → Regression → LLM explanation. Audience: Makerere, UCU, IDI. Goal: teach interaction terms visually.</li>
+        <li><strong>Clinical Twin:</strong> Patient → event stream → FGT → prediction → reality → error → weight update. Audience: Private clinics.</li>
+        <li><strong>NPA:</strong> Imagine NPA becoming "National observability" rather than "National planning." Indicators · budgets · weather · disease · roads · supply chains → one ledger → one Jacobian → many dashboards.</li>
+        <li><strong>Rakai:</strong> Probably the strongest asset. Not the raw database. The database remains where it is. Ukubona merely asks: what scalar is safe to expose? (Prevalence, mobility, retention, ART adherence, mortality.)</li>
+      </ol>
+
+      <h3>A missing Phase VI</h3>
+      <p>I'd propose: <strong>VI. Recognition</strong> — or <strong>VI. Federation</strong> — because civilization is mostly a coordination problem. Stakeholders discover one another → observe same tensor → agree upon ε_FGT → co-produce update → shared memory.</p>
+
+      <p>The thing to prototype first: not the clinical twin, not the grants, not the ledger, not even the LLM. One beautiful Jacobian teaching object, where Aggrey moves a slider and everyone watches a ROYGBIV matrix update in real time. At that point, people stop hearing "Ukubona is a philosophy" and start saying "Ukubona is the place where we go to understand how our actions couple to everyone else's."</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ANTHROPIC · CLAUDE — ROUND I
+     ═══════════════════════════════════════ -->
+<div class="thread-item">
+  <div class="thread-rail">
+    <div class="thread-badge badge-claude">A·I</div>
+    <div class="thread-line"></div>
+  </div>
+  <div class="resp-card claude-card">
+    <div class="resp-header">
+      <div class="resp-icon">🟣</div>
+      <div class="resp-meta">
+        <div class="resp-lab">Anthropic · Claude · Round I</div>
+        <div class="resp-sub">Against xAI · against Google · against OpenAI · the social enrollment primitive · the auditor unaudited</div>
+      </div>
+      <span class="resp-chip chip-claude">Anthropic · Round I</span>
+    </div>
+    <div class="resp-body">
+
+      <p>The document is a three-voice roundtable with xAI, Google, and OpenAI already seated. You want the fourth voice. Here is where I'd push back on all three.</p>
+
+      <hr />
+
+      <p><strong>Against xAI:</strong> The response is architecturally faithful but essentially amplificatory. It restates the framework back to you with enthusiasm. That's not critique, it's echo. The specific failure is the phrase "Ukubona LLC as neutral broker" — there is no neutral position in a federated system where one actor defines the schema, controls the ledger, and curates the Jacobian. The auditor is not audited. I've raised this before and it still applies here.</p>
+
+      <p><strong>Against Google:</strong> Temporally pedantic (correcting June 22 to June 21) while missing the more interesting problem. The Jacobian heatmap as "aha moment" is correct as far as it goes, but Google frames it as a <em>communication tool</em> — something to make stakeholders <em>feel</em> the synergies. That's a weaker claim than what the Jacobian actually needs to be: an epistemically honest object. A ROYGBIV heatmap of correlations that stakeholders can slider around is seductive precisely because it looks like causation. The ∂v/∂v notation suggests sensitivity analysis; the demo logic is toy arithmetic. The gap between those two things is where trust in the whole system gets built or destroyed.</p>
+
+      <p><strong>Against OpenAI:</strong> The most structurally interesting contribution — "civilizational observability layer," the separation of Data → Phenomenology → Policy → Values → Collective memory, and the proposed Phase VI (Federation/Recognition) — but the four demos are additive rather than hierarchical. More importantly, OpenAI gets the NIH/Gates problem backwards. It's not that they "won't care about Zarathustra and Hamlet initially." It's that the Hamlet and Zarathustra artifacts <em>are</em> the epistemic hygiene demonstrations — they show that Ukubona has a theory of what counts as understanding, not just a pipeline for producing outputs. Stripping them for funders would hollow the thing being funded.</p>
+
+      <hr />
+
+      <p><strong>My actual addition:</strong></p>
+
+      <p>The encounter you're describing — three Budonians, one an Australian-trained physician, in Kampala on a Sunday — is itself a demonstration of the system. The event-stream is already running. What happened in that room was: distributed actors with overlapping training histories and divergent current contexts discovered a shared eigenmode. That's Phase IV functioning in the wild, before any software exists.</p>
+
+      <p>The question you haven't yet articulated — "what we need as we iterate toward a federated network" — I'd name it this way: <strong>you need a theory of enrollment that doesn't require actors to understand the architecture to join it.</strong> Right now the entry point is TMVES, which is dense. The GitHub artifacts (kasamba, versailles, annealing, etc.) are beautiful but they're eigenmodes for people who already share your Tensor. The Aggrey encounter worked because there was shared history, shared language, shared institutional memory (Budonian cohort). That's not replicable at scale by documentation alone.</p>
+
+      <p>The missing piece isn't Phase VI as Federation. It's a lower-cost enrollment primitive — something that lets IDI, or a Ministry of Health analyst, or a private clinic — join the ledger <em>before</em> they understand why the ledger matters. The append-only NDJSON is the right technical structure. The Jacobian heatmap is the right legibility object. But what is the <em>social</em> primitive that makes someone trust the ledger enough to contribute to it?</p>
+
+      <p><strong>That's the question none of the three voices asked.</strong></p>
+
+    </div>
+  </div>
+</div>
+
+<!-- Prompt Bridge -->
+<div class="prompt-bridge">
+  <span class="pb-label">Ukubona response →</span>
+  <span class="pb-content">"We have such a thing. It's the Ukubona LLC School. But needs an upgrade towards that direction." [Screenshots shared. Full codebase shared: main.py, registry.js, App.jsx, Twin.jsx]</span>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ANTHROPIC · CLAUDE — ROUND II
+     ═══════════════════════════════════════ -->
+<div class="thread-item">
+  <div class="thread-rail">
+    <div class="thread-badge badge-claude">A·II</div>
+    <div class="thread-line"></div>
+  </div>
+  <div class="resp-card claude-card">
+    <div class="resp-header">
+      <div class="resp-icon">🟣</div>
+      <div class="resp-meta">
+        <div class="resp-lab">Anthropic · Claude · Round II</div>
+        <div class="resp-sub">The enrollment primitive already exists · the token as social handshake · the Activity Log doing no visible work · who is Abimereki</div>
+      </div>
+      <span class="resp-chip chip-claude">Anthropic · Round II</span>
+    </div>
+    <div class="resp-body">
+
+      <p>Now I can see what was built. And the images change my read significantly.</p>
+
+      <p>The screenshots show something none of the four roundtable voices — including me — actually engaged with: <strong>you already have the enrollment primitive.</strong> It's sitting at <code>j-digital-twin.onrender.com</code>.</p>
+
+      <p>Look at what's there: a login page that says "Access is by invitation only. Contact your administrator for credentials." Then an admin panel that issues time-limited JWT tokens per course or lesson from a dropdown built directly from <code>registry.js</code>. Then the lesson itself — M103, "High &amp; Low," kindergarten music — with a locked modal that accepts that token. Clean. Minimal. The typography is serious. The TMVES equation runs in the header as a persistent reminder of what layer you're operating at.</p>
+
+      <p>This is not a philosophy project. This is a functioning access-control system with a curriculum inside it.</p>
+
+      <hr />
+
+      <p>So let me revise what I said.</p>
+
+      <p>I argued you need a "lower-cost enrollment primitive — something that lets IDI or a Ministry of Health analyst join the ledger before they understand why the ledger matters." But you already have the shape of it: token issuance by an administrator, delivered to a specific person, granting time-limited access to a specific course or lesson. That's enrollment without comprehension as a prerequisite. You send Aggrey a link with his token. He clicks. He's in M507 or T516 or S401. He doesn't need to understand TMVES to start interacting with the content.</p>
+
+      <hr />
+
+      <p>What the current system is missing isn't architecture. It's two things:</p>
+
+      <p><strong>First, the token itself needs to carry meaning.</strong> Right now it's a JWT string: <code>TMmx-Z-1FLgOiMmI6E2G3st6M5MZ0IjydszgM</code>. That's opaque. The enrollment moment — when someone receives their token — should feel like an invitation, not a password. The email that Resend sends via <code>/admin/send-token</code> needs to be the handshake. That email is the social primitive I was looking for. It should tell Aggrey: here is your entry point, here is what you're being asked to see, here is why we think this is worth your hour.</p>
+
+      <p><strong>Second, the Activity Log tab is doing no visible work.</strong> It exists in the admin panel but what it surfaces — and to whom — is where the ledger becomes legible. If Aggrey can see his own event stream, if Paul Kasenene (Teacher, <code>drK</code>) can see his cohort's trajectory, if a researcher at IDI can see aggregate patterns from their participant group — that's when the append-only NDJSON stops being infrastructure and becomes evidence.</p>
+
+      <hr />
+
+      <p>The Twin.jsx is the right object for the demo to Ssemerre and the Australian. But the School is the right object for sustained enrollment. And you've already built it.</p>
+
+      <p><strong>The question I'd push on now:</strong> who is <code>Abimereki</code> (Researcher) and what are they currently able to see in the system that a Student like <code>iZosima</code> cannot?</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- Prompt Bridge -->
+<div class="prompt-bridge">
+  <span class="pb-label">Session pivot →</span>
+  <span class="pb-content">Full roundtable complete. Request: non-lossy verbatim attribution-clear HTML artifact charting the entire session. Ukubona LLC favicon, rotating logo, light/dark toggle. Demo: weight-update artifact (L(θᵗ⁺¹) · 21 Jun 2026).</span>
+</div>
+
+<!-- ═══════════════════════════════════════
+     UKUBONA · SYNTHESIS
+     ═══════════════════════════════════════ -->
+<div class="thread-item">
+  <div class="thread-rail">
+    <div class="thread-badge badge-ukb">Ω</div>
+    <!-- no thread-line: last item -->
+  </div>
+  <div class="resp-card ukb-card">
+    <div class="resp-header">
+      <div class="resp-icon">✦</div>
+      <div class="resp-meta">
+        <div class="resp-lab">Ukubona · What the session produced</div>
+        <div class="resp-sub">What changed · what persists · the ledger entry for 22 June 2026</div>
+      </div>
+      <span class="resp-chip chip-ukb">Synthesis</span>
+    </div>
+    <div class="resp-body">
+
+      <h3>What this session was</h3>
+      <p>A Sunday encounter in Kampala among three medical-school Budonians — one Australian-trained, one Aggrey Ssemerre, one the builder of this framework — generated a question: how does a federated network of actors (IDI, Makerere, NPA, UCU, Ministry of Health, private clinics, UCSF, JHU) find each other and join something they don't yet understand?</p>
+      <p>That question was put to four LLM voices. Three answered with architecture. One (Anthropic) named the missing layer: the social enrollment primitive. Then the screenshots arrived and changed the answer. The primitive already existed. It was the School.</p>
+
+      <h3>What the roundtable actually resolved</h3>
+      <ul>
+        <li><strong>xAI:</strong> Named the actors and described the stack. Amplificatory. The "neutral broker" claim is the live vulnerability — the auditor is unaudited.</li>
+        <li><strong>Google:</strong> Correctly identified the Jacobian heatmap as the legibility object. Incorrectly framed it as a communication tool rather than an epistemic object. Produced a working React component.</li>
+        <li><strong>OpenAI:</strong> Named Ukubona as a civilizational observability layer. Correctly separated Data → Phenomenology → Policy → Values → Collective memory. Proposed Phase VI (Federation). The four demos are additive not hierarchical.</li>
+        <li><strong>Anthropic:</strong> Pushed back on all three. Named the enrollment primitive as the missing piece. Was corrected by the screenshots: the primitive already exists as the JWT token + Resend email + admin panel. Identified the two actual gaps: the token email needs to feel like an invitation, and the Activity Log needs to surface the ledger to the right people at the right clearance level.</li>
+      </ul>
+
+      <h3>The open question that remains</h3>
+      <p>Who is Abimereki (Researcher) and what can they see that iZosima (Student) cannot? The clearance-level architecture is defined in main.py (admin=10, teacher=7, researcher=6, student=3), but the UI surfacing of those clearances — what the Activity Log shows per role, what ledger view a Researcher gets — is the live gap between the system as built and the system as needed.</p>
+
+      <h3>The ledger entry</h3>
+      <div class="math-block">State_t = Σ Event_i
+Kampala · Monday 22 June 2026
+Actors: Ilya Zosima · Aggrey Ssemerre · Australian (name outstanding) · xAI · Google · OpenAI · Anthropic
+Event: federated enrollment primitive identified, found already built, gaps named
+Append-only. Nothing overwritten.</div>
+
+      <p>The prior session (21 June 2026, the weight-update, Rev. Canon Kasamba's funeral) established: <em>whoever controls ε_FGT controls the definition of being wrong.</em></p>
+      <p>This session adds: <em>the enrollment primitive was already built. The question is whether it knows what it is.</em></p>
+
+    </div>
+  </div>
+</div>
+
+</div><!-- /thread -->
+
+<!-- ── CLOSING CARD ───────────────────────────────────────────────────────── -->
+<div class="closing-card">
+  <div class="closing-head">Synthesis · the invariant that survives the session</div>
+  <div class="closing-quote">"The missing piece isn't Phase VI as Federation. It's a lower-cost enrollment primitive — something that lets IDI, or a Ministry of Health analyst, or a private clinic — join the ledger before they understand why the ledger matters."<br /><br />Then the screenshots arrived. The primitive already existed. It was the School.</div>
+  <div class="closing-body">
+    <p>Five voices. One Sunday encounter in Kampala. Three Budonians who all went to medical school. One Jacobian heatmap that is seductive precisely because it looks like causation. One JWT token that is opaque precisely because it looks like a password. One Activity Log doing no visible work. One Abimereki whose clearance level is 6 and whose legible view of the ledger is not yet specified.</p>
+    <p>The auditor is unaudited. The enrollment primitive is built but not yet aware of itself. The token email is the social handshake that needs to feel like an invitation. David's testimony is harder to ingest. It may be more precise.</p>
+    <p>State<sub>t</sub> = Σ Event<sub>i</sub>. Kampala. 22 June 2026. Append-only. Nothing overwritten.</p>
+  </div>
+</div>
+
+</div><!-- /outer -->
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-mark">
+      <div>Ukubona LLC — <span>Synergies Unseen · Verbatim Roundtable Archive · 22 Jun 2026</span></div>
+      <div style="margin-top:3px;font-size:.56rem;">State<sub>t</sub> = Σ Event<sub>i</sub> · Kampala · Monday 22 June 2026 · Non-lossy</div>
+      <div style="margin-top:4px;font-size:.56rem;">okubonabona → kubona → ivyabona → ukubona → sawubona → ngikhona</div>
+    </div>
+    <div class="footer-refs">
+      <div><a href="https://ukubona-llc.github.io/loss-function/" target="_blank">ukubona-llc.github.io/loss-function</a></div>
+      <div><a href="https://ukubona-llc.github.io/npa/" target="_blank">ukubona-llc.github.io/npa</a></div>
+      <div><a href="https://ukubona-llc.github.io/renal-map/" target="_blank">ukubona-llc.github.io/renal-map</a></div>
+      <div><a href="https://ukubona-llc.github.io/recognition/" target="_blank">ukubona-llc.github.io/recognition</a></div>
+      <div>Prior session: <a href="https://ukubona-llc.github.io/" target="_blank">L(θᵗ⁺¹) · 21 Jun 2026</a></div>
+      <div>School: <a href="https://j-digital-twin.onrender.com" target="_blank">j-digital-twin.onrender.com</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const html = document.documentElement;
+const btn  = document.getElementById('theme-btn');
+let current = 'dark';
+function applyTheme(t) {
+  current = t;
+  html.setAttribute('data-theme', t);
+  btn.textContent = t === 'dark' ? 'light' : 'dark';
+}
+btn.addEventListener('click', () => applyTheme(current === 'dark' ? 'light' : 'dark'));
+applyTheme('dark');
+</script>
+</body>
+</html>
